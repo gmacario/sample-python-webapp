@@ -5,15 +5,18 @@
 
 from flask import Flask, jsonify
 
-def main():
-    app = Flask(__name__)
+# def main():
+#     pass
 
-    @app.route("/hello", methods=["GET"])
-    def hello():
-        return jsonify(message="Hello from Flask endpoint!"), 200
+# if __name__ == "__main__":
+#     main()
 
-    app.run(host="0.0.0.0", port=8000)
+app = Flask(__name__)
 
+@app.route("/hello", methods=["GET"])
+def hello():
+    return jsonify(message="Hello from Flask endpoint!"), 200
 
-if __name__ == "__main__":
-    main()
+app.run(host="0.0.0.0", port=8000)
+
+# EOF
